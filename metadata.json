@@ -1,0 +1,6 @@
+{
+  "name": "Dulce Control - 100 Recetas Dulces para Diabéticos",
+  "description": "Landing page de alta conversión para el ebook Dulce Control: 100 Recetas Dulces para Diabéticos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

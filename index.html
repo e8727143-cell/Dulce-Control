@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dulce Control: 100 Recetas Dulces para Diabéticos</title>
+  <meta name="description" content="Dulce Control reúne 100 recetas dulces pensadas para personas con diabetes: sin azúcar añadida, con harinas de bajo impacto glucémico, medidas exactas y los valores nutricionales de cada porción.">
+  <meta name="theme-color" content="#FFF6EC">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dulce Control: 100 Recetas Dulces para Diabéticos">
+  <meta property="og:description" content="Come dulce otra vez, sin el miedo a cada bocado. 100 recetas pensadas para personas con diabetes, sin azúcar añadida y con valores nutricionales por porción.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Playfair Display & Lato con display=swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ════════════════════════════════════════════════════════════
+       VARIABLES DE COLOR (PALETA ESTRICTA CON VARIANTES 3D)
+       ════════════════════════════════════════════════════════════ */
+    :root {
+      --color-gold: #D4AF37;
+      --color-gold-shadow: #A8841B;
+      --color-fuchsia: #D6336C;
+      --color-fuchsia-shadow: #991945;
+      --color-soft-pink: #F4B6C2;
+      --color-soft-pink-shadow: #D88E9E;
+      --color-cream: #FFF6EC;
+      --color-cream-shadow: #EAD8C3;
+      --color-white: #FFFFFF;
+      --color-chocolate: #5A3A22;
+      --color-chocolate-dark: #3F2613;
+      --color-caramel: #B87333;
+      --color-strawberry: #D62839;
+      --color-mint: #7DBE8A;
+      --color-mint-shadow: #599765;
+      --color-blueberry: #3B4A7A;
+      --color-blueberry-shadow: #253154;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       RESETEO Y BASE MOBILE-FIRST
+       ════════════════════════════════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Lato', system-ui, -apple-system, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--color-chocolate);
+      background-color: var(--color-cream);
+      overflow-x: hidden;
+      width: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        font-size: 18px;
+      }
+    }
+
+    /* Contenedor central flexible */
+    .container {
+      width: 100%;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 18px;
+      padding-right: 18px;
+      position: relative;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 720px;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+
+    /* Tipografías de títulos */
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--color-chocolate);
+      line-height: 1.25;
+      font-weight: 700;
+      text-wrap: balance;
+    }
+
+    h1 {
+      font-size: clamp(26px, 7vw, 36px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: clamp(23px, 5.5vw, 31px);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    p {
+      max-width: 68ch;
+      margin-bottom: 16px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       ACCESIBILIDAD Y FOCO
+       ════════════════════════════════════════════════════════════ */
+    :focus-visible {
+      outline: 3px solid var(--color-blueberry);
+      outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       BOTONES 3D TÁCTILES "PRESIONABLES"
+       ════════════════════════════════════════════════════════════ */
+    .btn-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 58px;
+      padding: 16px 24px;
+      background: linear-gradient(180deg, #E03E78 0%, var(--color-fuchsia) 100%);
+      color: var(--color-white);
+      font-family: 'Lato', system-ui, -apple-system, sans-serif;
+      font-size: 19px;
+      font-weight: 900;
+      text-align: center;
+      text-decoration: none;
+      border: 2.5px solid var(--color-gold);
+      border-radius: 9999px;
+      box-shadow: 0 7px 0 var(--color-fuchsia-shadow), 0 14px 24px rgba(214, 51, 108, 0.32);
+      cursor: pointer;
+      box-sizing: border-box;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      line-height: 1.25;
+      position: relative;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+    }
+
+    .btn-cta::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 12%;
+      right: 12%;
+      height: 40%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 100%);
+      border-radius: 9999px;
+      pointer-events: none;
+    }
+
+    .btn-cta:hover {
+      filter: brightness(1.04);
+      box-shadow: 0 8px 0 var(--color-fuchsia-shadow), 0 16px 28px rgba(214, 51, 108, 0.38);
+    }
+
+    .btn-cta:active {
+      transform: translateY(5px);
+      box-shadow: 0 2px 0 var(--color-fuchsia-shadow), 0 6px 12px rgba(214, 51, 108, 0.25);
+    }
+
+    .cta-subtext {
+      font-size: 14px;
+      color: var(--color-caramel);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       BARRA SUPERIOR ANUNCIO 3D
+       ════════════════════════════════════════════════════════════ */
+    .top-bar {
+      background: linear-gradient(180deg, var(--color-chocolate) 0%, var(--color-chocolate-dark) 100%);
+      color: var(--color-cream);
+      text-align: center;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: 0.2px;
+      border-bottom: 3px solid var(--color-gold);
+      box-shadow: 0 4px 14px rgba(63, 38, 19, 0.25);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       INSIGNIAS / FLOTANTES 3D (FRUTAS Y DULCES)
+       ════════════════════════════════════════════════════════════ */
+    .sweet-badge-3d {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFF5EB 100%);
+      border: 2px solid var(--color-gold);
+      border-radius: 9999px;
+      padding: 6px 14px;
+      box-shadow: 0 4px 0 var(--color-gold-shadow), 0 8px 16px rgba(90, 58, 34, 0.1);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--color-chocolate);
+      line-height: 1.2;
+      user-select: none;
+    }
+
+    .sweet-emoji-3d {
+      font-size: 18px;
+      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.15));
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 1: HERO (CON MOCKUP 3D Y CHEF)
+       ════════════════════════════════════════════════════════════ */
+    .hero-section {
+      background: radial-gradient(circle at 50% 20%, #FFFFFF 0%, #FFF6EC 60%, #FDE9EE 100%);
+      padding: 34px 0 44px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Hero Chef Banner Rectangular 3D */
+    .hero-chef-stage {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto 18px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Brillo dorado detrás suave pero notable */
+    .hero-gold-glow {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 90%;
+      background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.5) 0%, rgba(212, 175, 55, 0.2) 48%, rgba(212, 175, 55, 0) 75%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+      filter: blur(14px);
+    }
+
+    .hero-chef-banner-img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 490px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 24px 24px 0 0;
+      filter: drop-shadow(0 10px 22px rgba(212, 175, 55, 0.4));
+      transition: transform 0.25s ease;
+    }
+
+    .hero-chef-banner-img:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Línea rosa bonita de apoyo que cubre el corte de la mesa */
+    .hero-ground-line {
+      position: relative;
+      z-index: 3;
+      width: 92%;
+      max-width: 460px;
+      height: 6px;
+      background: linear-gradient(90deg, rgba(244, 182, 194, 0) 0%, var(--color-soft-pink) 15%, var(--color-fuchsia) 50%, var(--color-soft-pink) 85%, rgba(244, 182, 194, 0) 100%);
+      border-radius: 9999px;
+      margin-top: -3px;
+      box-shadow: 0 3px 8px rgba(214, 51, 108, 0.4);
+    }
+
+    /* Vitrina Mockup 3D Hero */
+    .hero-mockup-wrapper {
+      margin: 22px auto 26px auto;
+      max-width: 480px;
+      position: relative;
+    }
+
+    .hero-mockup-img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 18px 25px rgba(90, 58, 34, 0.25));
+      transition: transform 0.25s ease;
+    }
+
+    .hero-mockup-img:hover {
+      transform: translateY(-4px) scale(1.02);
+    }
+
+    .hero-subtitle {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--color-chocolate);
+      margin: 0 auto 20px auto;
+    }
+
+    @media (min-width: 768px) {
+      .hero-subtitle {
+        font-size: 19px;
+      }
+    }
+
+    .hero-pills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 0 auto 28px auto;
+      max-width: 480px;
+      width: 100%;
+    }
+
+    .hero-pill {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F2 100%);
+      border: 2px solid var(--color-gold);
+      border-radius: 9999px;
+      padding: 10px 10px;
+      font-size: clamp(12.5px, 3.4vw, 14px);
+      font-weight: 800;
+      color: var(--color-chocolate);
+      line-height: 1.2;
+      box-shadow: 0 4px 0 var(--color-gold-shadow), 0 6px 12px rgba(90, 58, 34, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-align: center;
+      white-space: nowrap;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 2: EL DOLOR (TARJETA 3D)
+       ════════════════════════════════════════════════════════════ */
+    .section-white {
+      background-color: var(--color-white);
+      padding: 46px 0;
+    }
+
+    .section-cream {
+      background-color: var(--color-cream);
+      padding: 46px 0;
+    }
+
+    .pain-card-3d {
+      background: #FFFFFF;
+      border: 2.5px solid var(--color-soft-pink);
+      border-radius: 24px;
+      padding: 24px 18px;
+      box-shadow: 0 8px 0 var(--color-soft-pink-shadow), 0 16px 30px rgba(90, 58, 34, 0.08);
+      margin-bottom: 24px;
+    }
+
+    .pain-list {
+      list-style: none;
+    }
+
+    .pain-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1.5px dotted var(--color-soft-pink);
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .pain-item:last-child {
+      border-bottom: none;
+    }
+
+    .icon-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 2px;
+      font-weight: 900;
+    }
+
+    .icon-cross {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FEE2E2 100%);
+      border: 2px solid var(--color-strawberry);
+      box-shadow: 0 3px 0 #A81C2B;
+      color: var(--color-strawberry);
+      font-size: 15px;
+    }
+
+    .icon-check {
+      background: linear-gradient(180deg, #FFFFFF 0%, #E8F8ED 100%);
+      border: 2px solid var(--color-mint);
+      box-shadow: 0 3px 0 var(--color-mint-shadow);
+      color: var(--color-mint);
+      font-size: 16px;
+    }
+
+    .pain-highlight {
+      background: linear-gradient(180deg, #FFE5EB 0%, var(--color-soft-pink) 100%);
+      border: 2.5px solid var(--color-gold);
+      border-radius: 20px;
+      padding: 22px 20px;
+      text-align: center;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--color-chocolate);
+      box-shadow: 0 6px 0 var(--color-gold-shadow), 0 14px 24px rgba(214, 51, 108, 0.16);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 3: LA SOLUCIÓN
+       ════════════════════════════════════════════════════════════ */
+    .solution-card-3d {
+      background: #FFFFFF;
+      border: 2.5px solid var(--color-gold);
+      border-radius: 24px;
+      padding: 26px 20px;
+      box-shadow: 0 8px 0 var(--color-gold-shadow), 0 18px 32px rgba(90, 58, 34, 0.09);
+    }
+
+    .solution-list {
+      list-style: none;
+      margin: 22px 0 0 0;
+    }
+
+    .solution-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 11px 0;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 4: LOS 10 CAPÍTULOS (FIGURA SUELTA CON BRILLO Y BASE)
+       ════════════════════════════════════════════════════════════ */
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .chapters-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+
+    .chapter-card {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFF9F4 100%);
+      border: 2px solid var(--color-soft-pink);
+      border-radius: 22px;
+      padding: 16px 10px 18px 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      box-shadow: 0 6px 0 var(--color-soft-pink-shadow), 0 12px 22px rgba(90, 58, 34, 0.08);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .chapter-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--color-gold);
+      box-shadow: 0 9px 0 var(--color-gold-shadow), 0 16px 28px rgba(90, 58, 34, 0.12);
+    }
+
+    /* Contenedor de la figura suelta */
+    .chapter-figure-stage {
+      position: relative;
+      width: 100%;
+      height: 145px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 12px;
+    }
+
+    /* Brillo dorado suave pero notable detrás */
+    .chapter-gold-glow {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.45) 0%, rgba(212, 175, 55, 0.18) 52%, rgba(212, 175, 55, 0) 74%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+      filter: blur(5px);
+    }
+
+    /* Imagen suelta PNG de la chef sin corte circular */
+    .chapter-character-img {
+      position: relative;
+      z-index: 2;
+      width: auto;
+      max-width: 100%;
+      height: 135px;
+      object-fit: contain;
+      object-position: bottom center;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 4px 10px rgba(212, 175, 55, 0.35));
+      transition: transform 0.2s ease;
+    }
+
+    .chapter-card:hover .chapter-character-img {
+      transform: scale(1.04);
+    }
+
+    /* Línea rosa bonita de apoyo que tapa el corte de las piernas */
+    .chapter-ground-line {
+      position: relative;
+      z-index: 3;
+      width: 84%;
+      height: 5px;
+      background: linear-gradient(90deg, rgba(244, 182, 194, 0) 0%, var(--color-soft-pink) 20%, var(--color-fuchsia) 50%, var(--color-soft-pink) 80%, rgba(244, 182, 194, 0) 100%);
+      border-radius: 9999px;
+      margin-top: -2px;
+      box-shadow: 0 2px 6px rgba(214, 51, 108, 0.35);
+    }
+
+    .chapter-number {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--color-fuchsia);
+      line-height: 1;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      text-shadow: 0 2px 4px rgba(214, 51, 108, 0.15);
+    }
+
+    .chapter-tag {
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--color-caramel);
+      margin-bottom: 4px;
+    }
+
+    .chapter-name {
+      font-family: 'Lato', system-ui, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-chocolate);
+      line-height: 1.3;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 5: CÓMO ES CADA RECETA (FICHA 3D)
+       ════════════════════════════════════════════════════════════ */
+    .recipe-intro-text {
+      text-align: center;
+      margin-bottom: 24px;
+      color: var(--color-chocolate);
+    }
+
+    .recipe-sample-card {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFAF5 100%);
+      border: 2.5px dashed var(--color-gold);
+      border-radius: 22px;
+      padding: 24px 20px;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 0 var(--color-cream-shadow), 0 16px 28px rgba(90, 58, 34, 0.08);
+      position: relative;
+    }
+
+    .recipe-sticker-3d {
+      position: absolute;
+      top: -14px;
+      right: 18px;
+      background: linear-gradient(180deg, var(--color-gold) 0%, #B89222 100%);
+      color: var(--color-chocolate);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      box-shadow: 0 3px 0 var(--color-gold-shadow);
+      border: 1.5px solid #FFFFFF;
+    }
+
+    .recipe-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--color-fuchsia);
+      margin-bottom: 6px;
+    }
+
+    .recipe-meta {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-caramel);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .recipe-block {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .recipe-block-label {
+      font-weight: 700;
+      color: var(--color-chocolate);
+    }
+
+    .recipe-nutri-bar {
+      background: linear-gradient(180deg, #FFE8EE 0%, var(--color-soft-pink) 100%);
+      border: 2px solid var(--color-gold);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--color-chocolate);
+      margin: 18px 0;
+      line-height: 1.45;
+      text-align: center;
+      box-shadow: 0 4px 0 var(--color-gold-shadow), 0 8px 16px rgba(214, 51, 108, 0.12);
+    }
+
+    .recipe-chef-tip {
+      border-left: 5px solid var(--color-mint);
+      padding: 12px 16px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F5FAF6 100%);
+      border-radius: 0 14px 14px 0;
+      box-shadow: 0 4px 12px rgba(125, 190, 138, 0.15);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .recipe-features-list {
+      list-style: none;
+    }
+
+    .recipe-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 10px 0;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 6: LA GUÍA INICIAL
+       ════════════════════════════════════════════════════════════ */
+    .guide-card {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFF9F3 100%);
+      border: 2.5px solid var(--color-gold);
+      border-radius: 20px;
+      padding: 24px 20px;
+      margin-top: 24px;
+      box-shadow: 0 7px 0 var(--color-gold-shadow), 0 16px 28px rgba(212, 175, 55, 0.14);
+    }
+
+    .guide-card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-fuchsia);
+      margin-bottom: 10px;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 7: LOS 3 BONOS 3D
+       ════════════════════════════════════════════════════════════ */
+    .bonuses-container {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .bonus-card {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF9 100%);
+      border: 2.5px solid var(--color-gold);
+      border-radius: 22px;
+      padding: 24px 20px;
+      box-shadow: 0 8px 0 var(--color-gold-shadow), 0 16px 28px rgba(90, 58, 34, 0.08);
+      position: relative;
+    }
+
+    .bonus-mockup-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto 16px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bonus-gold-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 190px;
+      height: 190px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.45) 0%, rgba(212, 175, 55, 0.16) 50%, rgba(212, 175, 55, 0) 75%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+      filter: blur(8px);
+    }
+
+    .bonus-mockup-img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 240px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 12px 20px rgba(90, 58, 34, 0.2));
+      transition: transform 0.2s ease;
+    }
+
+    .bonus-card:hover .bonus-mockup-img {
+      transform: translateY(-4px) scale(1.02);
+    }
+
+    .bonus-badge {
+      display: inline-block;
+      background: linear-gradient(180deg, #4A5C94 0%, var(--color-blueberry) 100%);
+      color: var(--color-white);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+      line-height: 1.2;
+      border: 1.5px solid var(--color-gold);
+      box-shadow: 0 3px 0 var(--color-blueberry-shadow);
+    }
+
+    .bonus-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--color-fuchsia);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .bonus-text {
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--color-chocolate);
+      margin-bottom: 14px;
+    }
+
+    .bonus-pricing {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-caramel);
+      padding-top: 12px;
+      border-top: 1.5px dotted var(--color-soft-pink);
+    }
+
+    .strike-red {
+      text-decoration: line-through;
+      color: var(--color-strawberry);
+      font-weight: 700;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 8: LA OFERTA 3D (CON MOCKUP DESTACADO)
+       ════════════════════════════════════════════════════════════ */
+    .offer-section {
+      background: linear-gradient(180deg, var(--color-chocolate) 0%, var(--color-chocolate-dark) 100%);
+      padding: 50px 0 56px 0;
+      color: var(--color-cream);
+      scroll-margin-top: 20px;
+      position: relative;
+    }
+
+    .offer-section h2 {
+      color: var(--color-cream);
+      margin-bottom: 24px;
+    }
+
+    .offer-mockup-container {
+      max-width: 440px;
+      margin: 0 auto 24px auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .offer-mockup-img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+    }
+
+    .offer-card {
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--color-cream) 100%);
+      border: 3.5px solid var(--color-gold);
+      border-radius: 26px;
+      padding: 28px 20px;
+      color: var(--color-chocolate);
+      box-shadow: 0 12px 0 var(--color-gold-shadow), 0 24px 44px rgba(0, 0, 0, 0.45);
+      position: relative;
+    }
+
+    .offer-items-list {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .offer-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1.5px dotted var(--color-soft-pink);
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .offer-line:last-child {
+      border-bottom: 2px solid var(--color-gold);
+    }
+
+    .offer-line-name {
+      font-weight: 700;
+      color: var(--color-chocolate);
+    }
+
+    .offer-line-price {
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .offer-total-strike {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 22px;
+      color: var(--color-chocolate);
+    }
+
+    .offer-main-price {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--color-fuchsia);
+      text-align: center;
+      line-height: 1.05;
+      margin: 6px 0;
+      text-shadow: 0 3px 6px rgba(214, 51, 108, 0.2);
+    }
+
+    .offer-access-note {
+      text-align: center;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-caramel);
+      margin-bottom: 22px;
+    }
+
+    .offer-delivery-note {
+      text-align: center;
+      font-size: 14px;
+      color: var(--color-chocolate);
+      margin-top: 14px;
+      line-height: 1.45;
+    }
+
+    .offer-badges {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .offer-badge-pill {
+      width: 100%;
+      min-height: 52px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.06) 100%);
+      border: 2px solid var(--color-gold);
+      border-radius: 9999px;
+      padding: 12px 20px;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--color-cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-sizing: border-box;
+      line-height: 1.2;
+      box-shadow: 0 4px 0 var(--color-gold-shadow);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 9: GARANTÍA 3D
+       ════════════════════════════════════════════════════════════ */
+    .guarantee-section {
+      background-color: var(--color-white);
+      padding: 48px 0;
+      text-align: center;
+    }
+
+    .guarantee-seal {
+      width: 116px;
+      height: 116px;
+      border-radius: 50%;
+      border: 4px solid var(--color-gold);
+      outline: 2px dashed var(--color-gold);
+      outline-offset: -8px;
+      background: radial-gradient(circle, #FFFFFF 0%, var(--color-cream) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 6px 0 var(--color-gold-shadow), 0 14px 26px rgba(212, 175, 55, 0.28);
+    }
+
+    .guarantee-seal-num {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--color-fuchsia);
+      line-height: 1;
+    }
+
+    .guarantee-seal-label {
+      font-family: 'Lato', system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--color-chocolate);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-top: 2px;
+    }
+
+    .guarantee-text {
+      max-width: 580px;
+      margin: 0 auto;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 10: ¿ES PARA TI? 3D
+       ════════════════════════════════════════════════════════════ */
+    .for-you-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media (min-width: 640px) {
+      .for-you-grid {
+        flex-direction: row;
+      }
+    }
+
+    .for-you-card {
+      flex: 1;
+      background: #FFFFFF;
+      border: 2.5px solid var(--color-gold);
+      border-radius: 22px;
+      padding: 24px 20px;
+      box-shadow: 0 7px 0 var(--color-gold-shadow), 0 14px 24px rgba(90, 58, 34, 0.08);
+    }
+
+    .for-you-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--color-chocolate);
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--color-soft-pink);
+    }
+
+    .for-you-list {
+      list-style: none;
+    }
+
+    .for-you-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 9px 0;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 11: PREGUNTAS FRECUENTES (FAQ 3D)
+       ════════════════════════════════════════════════════════════ */
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    details.faq-item {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFDFC 100%);
+      border: 2px solid var(--color-soft-pink);
+      border-radius: 18px;
+      padding: 0 18px;
+      box-shadow: 0 5px 0 var(--color-soft-pink-shadow), 0 8px 16px rgba(90, 58, 34, 0.05);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    }
+
+    details.faq-item[open] {
+      border-color: var(--color-gold);
+      box-shadow: 0 6px 0 var(--color-gold-shadow), 0 12px 22px rgba(212, 175, 55, 0.15);
+      transform: translateY(-2px);
+    }
+
+    summary.faq-question {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--color-chocolate);
+      user-select: none;
+      min-height: 48px;
+      line-height: 1.35;
+    }
+
+    summary.faq-question::-webkit-details-marker {
+      display: none;
+    }
+
+    summary.faq-question::after {
+      content: "+";
+      font-family: 'Lato', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 26px;
+      color: var(--color-fuchsia);
+      flex-shrink: 0;
+      line-height: 1;
+      width: 24px;
+      text-align: right;
+    }
+
+    details[open] summary.faq-question::after {
+      content: "–";
+    }
+
+    .faq-answer {
+      padding: 0 0 18px 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-chocolate);
+      border-top: 1.5px dotted var(--color-soft-pink);
+      padding-top: 14px;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECCIÓN 12: CIERRE 3D
+       ════════════════════════════════════════════════════════════ */
+    .closing-section {
+      background: radial-gradient(circle at 50% 30%, #FFFFFF 0%, #FFF6EC 60%, #FEE8EE 100%);
+      padding: 48px 0 56px 0;
+      text-align: center;
+    }
+
+    .closing-mockup-img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px auto;
+      filter: drop-shadow(0 16px 24px rgba(90, 58, 34, 0.22));
+    }
+
+    .closing-text {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 580px;
+      margin: 0 auto 28px auto;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       PIE DE PÁGINA (FOOTER)
+       ════════════════════════════════════════════════════════════ */
+    .site-footer {
+      background-color: var(--color-cream);
+      border-top: 3px solid var(--color-gold);
+      padding: 34px 0 94px 0;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--color-chocolate);
+    }
+
+    @media (min-width: 769px) {
+      .site-footer {
+        padding-bottom: 36px;
+      }
+    }
+
+    .footer-disclaimer {
+      max-width: 620px;
+      margin: 0 auto 16px auto;
+      opacity: 0.9;
+    }
+
+    .footer-legal {
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .footer-copy {
+      opacity: 0.8;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       BARRA FIJA DE COMPRA EN MÓVIL 3D
+       ════════════════════════════════════════════════════════════ */
+    .fixed-cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--color-cream) 100%);
+      border-top: 3px solid var(--color-gold);
+      padding: 10px 16px;
+      padding-bottom: max(12px, env(safe-area-inset-bottom));
+      box-shadow: 0 -6px 20px rgba(90, 58, 34, 0.2);
+      display: none;
+      transform: translateY(100%);
+      transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .fixed-cta-bar.is-visible {
+      display: block;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 769px) {
+      .fixed-cta-bar,
+      .fixed-cta-bar.is-visible {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <!-- SECCIÓN 1: HERO -->
+    <section class="hero-section" aria-label="Portada">
+      <div class="container">
+        <!-- Imagen rectangular de la chef en Hero con brillo dorado y soporte rosa -->
+        <div class="hero-chef-stage">
+          <div class="hero-gold-glow"></div>
+          <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790990655/imagenhero_leanding_page.png" alt="Chef Dulce Control con recetas saludables" class="hero-chef-banner-img" width="490" height="auto">
+          <div class="hero-ground-line"></div>
+        </div>
+
+        <h1>Come dulce otra vez, sin el miedo a cada bocado</h1>
+
+        <p class="hero-subtitle">
+          Dulce Control reúne 100 recetas dulces pensadas para personas con diabetes: sin azúcar añadida, con harinas de bajo impacto glucémico, medidas exactas y los valores nutricionales de cada porción.
+        </p>
+
+        <!-- Vitrina Mockup Ebook 3D Oficial -->
+        <div class="hero-mockup-wrapper">
+          <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790989074/mockup_ebook_dulce_control.png" alt="Mockup 3D Ebook Dulce Control 100 Recetas" class="hero-mockup-img" width="420" height="420">
+        </div>
+
+        <!-- Cuatro etiquetas tipo píldora 3D -->
+        <div class="hero-pills">
+          <span class="hero-pill"><span class="sweet-emoji-3d">🍰</span> 100 recetas</span>
+          <span class="hero-pill"><span class="sweet-emoji-3d">🍓</span> Paso a paso</span>
+          <span class="hero-pill"><span class="sweet-emoji-3d">🥑</span> Sin azúcar añadida</span>
+          <span class="hero-pill"><span class="sweet-emoji-3d">🎁</span> 3 bonos incluidos</span>
+        </div>
+
+        <!-- Botón Hero 3D -->
+        <a href="#oferta" class="btn-cta" id="hero-cta" data-cta>
+          Quiero mis 100 recetas ahora
+        </a>
+        <p class="cta-subtext">
+          Acceso inmediato en tu correo. Pago seguro. Garantía de 7 días.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: EL DOLOR -->
+    <section class="section-white" aria-label="El dolor">
+      <div class="container">
+        <h2>¿Cuántas veces dijiste «mejor no»?</h2>
+
+        <div class="pain-card-3d">
+          <ul class="pain-list">
+            <li class="pain-item">
+              <span class="icon-circle icon-cross" aria-hidden="true">✕</span>
+              <span>Pasas frente a la pastelería y apartas la mirada para no sufrir.</span>
+            </li>
+            <li class="pain-item">
+              <span class="icon-circle icon-cross" aria-hidden="true">✕</span>
+              <span>Lees etiquetas durante minutos y terminas sin comprar nada.</span>
+            </li>
+            <li class="pain-item">
+              <span class="icon-circle icon-cross" aria-hidden="true">✕</span>
+              <span>Probaste una receta «light» que sabía a cartón y no volviste a intentarlo.</span>
+            </li>
+            <li class="pain-item">
+              <span class="icon-circle icon-cross" aria-hidden="true">✕</span>
+              <span>En cada cumpleaños eres quien dice «yo no, gracias» mientras todos celebran.</span>
+            </li>
+            <li class="pain-item">
+              <span class="icon-circle icon-cross" aria-hidden="true">✕</span>
+              <span>No sabes cuánto es una porción razonable, así que prefieres no arriesgarte.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pain-highlight">
+          No te falta fuerza de voluntad. Te faltaban recetas hechas pensando en ti.
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: LA SOLUCIÓN -->
+    <section class="section-cream" aria-label="La solución">
+      <div class="container">
+        <h2>El dulce y el cuidado de tu glucosa pueden convivir en la misma mesa</h2>
+
+        <div class="solution-card-3d">
+          <p>
+            Con <strong>Dulce Control</strong> dejas de adivinar. Cada receta está pensada con ingredientes de bajo impacto glucémico: harina de almendra, avena, coco, yogur griego, ricota, frutos rojos, chía y chocolate de 70 % o más. Todas se endulzan con eritritol u otros endulzantes sin azúcar.
+          </p>
+
+          <p>
+            Sin ingredientes raros. Sin recetas de chef imposibles. Solo postres que se preparan en tu cocina, con lo que encuentras en cualquier supermercado, y que saben a postre de verdad.
+          </p>
+
+          <ul class="solution-list">
+            <li class="solution-item">
+              <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+              <span>Tortas, brownies y galletas que se disfrutan de verdad</span>
+            </li>
+            <li class="solution-item">
+              <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+              <span>Helados cremosos, mousses y flanes para los días de calor</span>
+            </li>
+            <li class="solution-item">
+              <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+              <span>Desayunos dulces y antojos listos en 3 minutos en el microondas</span>
+            </li>
+            <li class="solution-item">
+              <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+              <span>Porciones y valores aproximados de cada receta, para que decidas con información</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: LOS CAPÍTULOS CON IMÁGENES DEL LIBRO 3D -->
+    <section class="section-white" aria-label="Capítulos">
+      <div class="container">
+        <h2>10 capítulos, 100 recetas, cero monotonía</h2>
+
+        <div class="chapters-grid">
+          <!-- Capítulo 1 -->
+          <div class="chapter-card">
+            <div class="chapter-figure-stage">
+              <div class="chapter-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790988693/1.png" alt="Capítulo 1: Tortas y bizcochos" class="chapter-character-img" loading="lazy" width="135" height="135">
+              <div class="chapter-ground-line"></div>
+            </div>
+            <div class="chapter-number">10</div>
+            <div class="chapter-tag">Recetas</div>
+            <div class="chapter-name">Tortas y bizcochos</div>
+          </div>
+
+          <!-- Capítulo 2 -->
+          <div class="chapter-card">
+            <div class="chapter-figure-stage">
+              <div class="chapter-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790988699/2.png" alt="Capítulo 2: Brownies y galletas" class="chapter-character-img" loading="lazy" width="135" height="135">
+              <div class="chapter-ground-line"></div>
+            </div>
+            <div class="chapter-number">10</div>
+            <div class="chapter-tag">Recetas</div>
+            <div class="chapter-name">Brownies y galletas</div>
+          </div>
+
+          <!-- Capítulo 3 -->
+          <div class="chapter-card">
+            <div class="chapter-figure-stage">
+              <div class="chapter-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790988699/3.png" alt="Capítulo 3: Mousses y cremas" class="chapter-character-img" loading="lazy" width="135" height="135">
+              <div class="chapter-ground-line"></div>
+            </div>
+            <div class="chapter-number">10</div>
+            <div class="chapter-tag">Recetas</div>
+            <div class="chapter-name">Mousses y cremas</div>
+          </div>
+
+          <!-- Capítulo 4 -->
+          <div class="chapter-card">
+            <div class="chapter-figure-stage">
+              <div class="chapter-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790988698/4.png" alt="Capítulo 4: Helados y congelados" class="chapter-character-img" loading="lazy" width="135" height="135">
+              <div class="chapter-ground-line"></div>
+            </div>
+            <div class="chapter-number">10</div>
+            <div class="chapter-tag">Recetas</div>
+            <div class="chapter-name">Helados y congelados</div>
+          </div>
+
+          <!-- Capítulo 5 -->
+          <div class="chapter-card">
+            <div class="chapter-figure-stage">
+              <div class="chapter-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790988699/5.png" alt="Capítulo 5: Flanes, gelatinas y puddings" class="chapter-character-img" loading="lazy" width="135" height="135">
+              <div class="chapter-ground-line"></div>
+            </div>
+            <div class="chapter-number">10</div>
+            <div class="chapter-tag">Recetas</div>
+            <div class="chapter-name">Flanes, gelatinas y puddings</div>
+          </div>
+
+          <!-- Capítulo 6 -->
+          <div class="chapter-card">
+            <div class="chapter-figure-stage">
+              <div class="chapter-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790988696/6.png" alt="Capítulo 6: Tartas y pasteles" class="chapter-character-img" loading="lazy" width="135" height="135">
+              <div class="chapter-ground-line"></div>
+            </div>
+            <div class="chapter-number">10</div>
+            <div class="chapter-tag">Recetas</div>
+            <div class="chapter-name">Tartas y pasteles</div>
+          </div>
+
+          <!-- Capítulo 7 -->
+          <div class="chapter-card">
+            <div class="chapter-figure-stage">
+              <div class="chapter-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790988693/7.png" alt="Capítulo 7: Dulces con frutas" class="chapter-character-img" loading="lazy" width="135" height="135">
+              <div class="chapter-ground-line"></div>
+            </div>
+            <div class="chapter-number">10</div>
+            <div class="chapter-tag">Recetas</div>
+            <div class="chapter-name">Dulces con frutas</div>
+          </div>
+
+          <!-- Capítulo 8 -->
+          <div class="chapter-card">
+            <div class="chapter-figure-stage">
+              <div class="chapter-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790988697/8.png" alt="Capítulo 8: Bombones y trufas" class="chapter-character-img" loading="lazy" width="135" height="135">
+              <div class="chapter-ground-line"></div>
+            </div>
+            <div class="chapter-number">10</div>
+            <div class="chapter-tag">Recetas</div>
+            <div class="chapter-name">Bombones y trufas</div>
+          </div>
+
+          <!-- Capítulo 9 -->
+          <div class="chapter-card">
+            <div class="chapter-figure-stage">
+              <div class="chapter-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790988693/9.png" alt="Capítulo 9: Desayunos dulces" class="chapter-character-img" loading="lazy" width="135" height="135">
+              <div class="chapter-ground-line"></div>
+            </div>
+            <div class="chapter-number">10</div>
+            <div class="chapter-tag">Recetas</div>
+            <div class="chapter-name">Desayunos dulces</div>
+          </div>
+
+          <!-- Capítulo 10 -->
+          <div class="chapter-card">
+            <div class="chapter-figure-stage">
+              <div class="chapter-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790988693/10.png" alt="Capítulo 10: Rápidos, sin horno y microondas" class="chapter-character-img" loading="lazy" width="135" height="135">
+              <div class="chapter-ground-line"></div>
+            </div>
+            <div class="chapter-number">10</div>
+            <div class="chapter-tag">Recetas</div>
+            <div class="chapter-name">Rápidos, sin horno y microondas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: CÓMO ES CADA RECETA -->
+    <section class="section-cream" aria-label="Formato de las recetas">
+      <div class="container">
+        <h2>Así se ve cada receta por dentro</h2>
+
+        <p class="recipe-intro-text">
+          Todas siguen el mismo formato claro, para que cocines sin dudas desde el primer intento.
+        </p>
+
+        <!-- Tarjeta de ejemplo 3D con sello dorado -->
+        <article class="recipe-sample-card">
+          <span class="recipe-sticker-3d">✨ Receta de ejemplo</span>
+          <h3 class="recipe-title">11. Brownie de cacao y almendra</h3>
+          <p class="recipe-meta">12 porciones · Preparación 10 min · Horno 25 min</p>
+
+          <p class="recipe-block">
+            <span class="recipe-block-label">Ingredientes:</span> 1 taza (100 g) de harina de almendra, 1/3 taza (30 g) de cacao sin azúcar, 1/2 taza (90 g) de eritritol, 3 huevos, 1/3 taza (80 ml) de aceite de coco…
+          </p>
+
+          <p class="recipe-block">
+            <span class="recipe-block-label">Preparación:</span> 1. Precalienta el horno a 175 °C. 2. Mezcla los ingredientes secos. 3. Bate los huevos con el aceite y la vainilla…
+          </p>
+
+          <div class="recipe-nutri-bar">
+            Por porción (aprox.): 150 kcal | 4 g carbohidratos netos | 3 g fibra | 5 g proteína
+          </div>
+
+          <div class="recipe-chef-tip">
+            <strong>Consejo del chef:</strong> en la nevera dura hasta 5 días y queda más húmedo al día siguiente.
+          </div>
+        </article>
+
+        <!-- Lista de beneficios de la receta -->
+        <ul class="recipe-features-list">
+          <li class="recipe-feature-item">
+            <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+            <span>Ingredientes con cantidades exactas en tazas, cucharadas y gramos</span>
+          </li>
+          <li class="recipe-feature-item">
+            <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+            <span>Preparación paso a paso, sin vueltas</span>
+          </li>
+          <li class="recipe-feature-item">
+            <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+            <span>Tiempos y porciones para planificar tu día</span>
+          </li>
+          <li class="recipe-feature-item">
+            <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+            <span>Valores aproximados de calorías, carbohidratos netos, fibra y proteína</span>
+          </li>
+          <li class="recipe-feature-item">
+            <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+            <span>Un consejo del chef para que te salga perfecto</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 6: LA GUÍA INICIAL -->
+    <section class="section-white" aria-label="La guía inicial">
+      <div class="container">
+        <h2>Además, recibes la guía para empezar bien</h2>
+
+        <p>
+          Antes de las recetas encontrarás lo esencial, explicado en simple: qué es el índice glucémico, cómo pensar en carbohidratos y porciones, qué endulzantes usar (y cuáles evitar), cómo armar tu despensa y los trucos para hornear sin azúcar.
+        </p>
+
+        <div class="guide-card">
+          <h3 class="guide-card-title">Lo mejor: aprendes una vez y cocinas siempre</h3>
+          <p>
+            Cuando entiendes el porqué de cada ingrediente, puedes adaptar y crear tus propios postres con confianza.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 7: LOS 3 BONOS 3D -->
+    <section class="section-cream" aria-label="Bonos incluidos">
+      <div class="container">
+        <h2>Hoy te llevas 3 bonos para llegar más lejos</h2>
+
+        <div class="bonuses-container">
+          <!-- Bono 1 -->
+          <article class="bonus-card">
+            <div class="bonus-mockup-wrap">
+              <div class="bonus-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790990399/IDEAS_DE_SNACKS_RICOS_EN_PROTE%C3%8DNAS_bonus_3_mockup.png" alt="Mockup Bono 1: Ideas de snacks ricos en proteínas" class="bonus-mockup-img" loading="lazy" width="240" height="auto">
+            </div>
+            <span class="bonus-badge">BONO 1</span>
+            <h3 class="bonus-title">Bono 1 — Ideas de snacks ricos en proteínas</h3>
+            <p class="bonus-text">
+              Colaciones dulces y saladas, rápidas y saciantes, para tus tardes y entre comidas. Más variedad, menos improvisación y menos tentaciones de último minuto.
+            </p>
+            <div class="bonus-pricing">
+              Valor: <span class="strike-red">US$ 9</span> <strong>Hoy: gratis</strong>
+            </div>
+          </article>
+
+          <!-- Bono 2 -->
+          <article class="bonus-card">
+            <div class="bonus-mockup-wrap">
+              <div class="bonus-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790990397/La_biblia_de_los_ingredientes_sustitutos_bonus_1_mockup.png" alt="Mockup Bono 2: La biblia de los ingredientes sustitutos" class="bonus-mockup-img" loading="lazy" width="240" height="auto">
+            </div>
+            <span class="bonus-badge">BONO 2</span>
+            <h3 class="bonus-title">Bono 2 — La biblia de los ingredientes sustitutos</h3>
+            <p class="bonus-text">
+              ¿Te falta la harina de almendra, los huevos o el yogur? Aquí tienes con qué reemplazarlos y en qué cantidades, para que <strong>nunca falles en una receta</strong> ni tengas que salir corriendo al supermercado.
+            </p>
+            <div class="bonus-pricing">
+              Valor: <span class="strike-red">US$ 12</span> <strong>Hoy: gratis</strong>
+            </div>
+          </article>
+
+          <!-- Bono 3 -->
+          <article class="bonus-card">
+            <div class="bonus-mockup-wrap">
+              <div class="bonus-gold-glow"></div>
+              <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790990396/como_emprender_en_la_venta_de_estos_postres_Saludables_bonus_2_mockup.png" alt="Mockup Bono 3: Cómo emprender en la venta de postres saludables" class="bonus-mockup-img" loading="lazy" width="240" height="auto">
+            </div>
+            <span class="bonus-badge">BONO 3</span>
+            <h3 class="bonus-title">Bono 3 — Cómo emprender en la venta de postres saludables</h3>
+            <p class="bonus-text">
+              Convierte lo que aprendes en ingresos: cómo calcular costos y precios, presentar y empacar tus postres, dónde vender y cómo atraer a tus primeros clientes. Un punto de partida claro para empezar con poco.
+            </p>
+            <div class="bonus-pricing">
+              Valor: <span class="strike-red">US$ 17</span> <strong>Hoy: gratis</strong>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 8: LA OFERTA 3D CON MOCKUP COMPLETO -->
+    <section class="offer-section" id="oferta" aria-label="Oferta especial">
+      <div class="container">
+        <h2>Todo esto es tuyo hoy</h2>
+
+        <!-- Vitrina Mockup 3D Oficial en Oferta -->
+        <div class="offer-mockup-container">
+          <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790989074/mockup_ebook_dulce_control.png" alt="Mockup Pack Completo Dulce Control Ebook y Bonos" class="offer-mockup-img" width="400" height="400">
+        </div>
+
+        <div class="offer-card">
+          <ul class="offer-items-list">
+            <li class="offer-line">
+              <span class="offer-line-name">Ebook Dulce Control: 100 recetas</span>
+              <span class="offer-line-price strike-red">US$ 27</span>
+            </li>
+            <li class="offer-line">
+              <span class="offer-line-name">Guía rápida, endulzantes y despensa</span>
+              <span class="offer-line-price">incluida</span>
+            </li>
+            <li class="offer-line">
+              <span class="offer-line-name">Bono 1: Snacks ricos en proteínas</span>
+              <span class="offer-line-price strike-red">US$ 9</span>
+            </li>
+            <li class="offer-line">
+              <span class="offer-line-name">Bono 2: Ingredientes sustitutos</span>
+              <span class="offer-line-price strike-red">US$ 12</span>
+            </li>
+            <li class="offer-line">
+              <span class="offer-line-name">Bono 3: Emprender con postres saludables</span>
+              <span class="offer-line-price strike-red">US$ 17</span>
+            </li>
+          </ul>
+
+          <div class="offer-total-strike">
+            Valor total: <span class="strike-red">US$ 65</span>
+          </div>
+
+          <div class="offer-main-price">
+            US$ 9,90
+          </div>
+
+          <div class="offer-access-note">
+            Pago único. Acceso de por vida.
+          </div>
+
+          <!-- Botón de compra Oferta 3D -->
+          <a href="#" class="btn-cta" data-cta>
+            Sí, quiero Dulce Control + 3 bonos
+          </a>
+
+          <p class="offer-delivery-note">
+            Recibes todo en tu correo, al instante. Úsalo desde tu celular, tablet o computadora.
+          </p>
+        </div>
+
+        <!-- Tres insignias tipo píldora 3D -->
+        <div class="offer-badges">
+          <span class="offer-badge-pill">🔒 Pago seguro con Hotmart</span>
+          <span class="offer-badge-pill">⚡ Acceso inmediato</span>
+          <span class="offer-badge-pill">📱 Se lee en el celular</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 9: GARANTÍA 3D -->
+    <section class="guarantee-section" aria-label="Garantía de satisfacción">
+      <div class="container">
+        <div class="guarantee-seal">
+          <span class="guarantee-seal-num">7</span>
+          <span class="guarantee-seal-label">días</span>
+        </div>
+
+        <h2>Garantía de 7 días, sin riesgo</h2>
+
+        <p class="guarantee-text">
+          Descarga el ebook, prueba las recetas y revisa los bonos. Si en 7 días sientes que no es para ti, escríbenos y te devolvemos el 100 % de tu dinero, sin preguntas incómodas.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 10: ¿ES PARA TI? 3D -->
+    <section class="section-cream" aria-label="¿Es para ti?">
+      <div class="container">
+        <h2>¿Es para ti?</h2>
+
+        <div class="for-you-grid">
+          <!-- Es para ti si... -->
+          <div class="for-you-card">
+            <h3 class="for-you-title">Es para ti si…</h3>
+            <ul class="for-you-list">
+              <li class="for-you-item">
+                <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+                <span>Tienes diabetes y extrañas los postres.</span>
+              </li>
+              <li class="for-you-item">
+                <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+                <span>Cocinas para un familiar con diabetes.</span>
+              </li>
+              <li class="for-you-item">
+                <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+                <span>Quieres porciones y valores claros.</span>
+              </li>
+              <li class="for-you-item">
+                <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+                <span>Buscas recetas simples con ingredientes comunes.</span>
+              </li>
+              <li class="for-you-item">
+                <span class="icon-circle icon-check" aria-hidden="true">✓</span>
+                <span>Quieres vender postres saludables.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- No es para ti si... -->
+          <div class="for-you-card">
+            <h3 class="for-you-title">No es para ti si…</h3>
+            <ul class="for-you-list">
+              <li class="for-you-item">
+                <span class="icon-circle icon-cross" aria-hidden="true">✕</span>
+                <span>Buscas un tratamiento o una cura.</span>
+              </li>
+              <li class="for-you-item">
+                <span class="icon-circle icon-cross" aria-hidden="true">✕</span>
+                <span>Quieres reemplazar la guía de tu médico.</span>
+              </li>
+              <li class="for-you-item">
+                <span class="icon-circle icon-cross" aria-hidden="true">✕</span>
+                <span>No estás dispuesto a medir ni a leer etiquetas.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 11: PREGUNTAS FRECUENTES (FAQ 3D) -->
+    <section class="section-white" aria-label="Preguntas frecuentes">
+      <div class="container">
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary class="faq-question">1. ¿Cómo recibo el ebook y los bonos?</summary>
+            <div class="faq-answer">
+              Al confirmarse tu pago recibes un correo con el acceso a todo. Es inmediato y puedes descargarlo cuando quieras.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">2. ¿En qué formato viene? ¿Puedo leerlo en el celular?</summary>
+            <div class="faq-answer">
+              Viene en formato digital (PDF), pensado para leerse cómodamente en celular, tablet o computadora. También puedes imprimir las recetas que más uses.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">3. ¿Sirve para diabetes tipo 1 y tipo 2?</summary>
+            <div class="faq-answer">
+              Las recetas están pensadas para personas con diabetes, con ingredientes de bajo impacto glucémico. Aun así, cada cuerpo responde distinto: consulta con tu médico o nutricionista y mide tu glucosa para saber cómo reaccionas a cada receta.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">4. ¿Necesito ingredientes difíciles de conseguir?</summary>
+            <div class="faq-answer">
+              No. Casi todo se consigue en supermercados: harina de almendra, avena, huevos, yogur, cacao, frutos rojos y eritritol. Y si te falta algo, el Bono 2 te dice con qué reemplazarlo.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">5. No sé cocinar, ¿puedo hacerlo igual?</summary>
+            <div class="faq-answer">
+              Sí. Las recetas tienen medidas exactas y pasos simples. Hay opciones sin horno y de 3 minutos en el microondas para empezar.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">6. ¿Las recetas incluyen información nutricional?</summary>
+            <div class="faq-answer">
+              Sí, cada una trae valores aproximados por porción de calorías, carbohidratos netos, fibra y proteína. Son orientativos y pueden variar según las marcas.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">7. ¿Esto es un tratamiento médico?</summary>
+            <div class="faq-answer">
+              No. Es un material informativo de recetas. No cura ni revierte la diabetes ni sustituye la indicación de tu equipo de salud.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 12: CIERRE 3D -->
+    <section class="closing-section" aria-label="Cierre">
+      <div class="container">
+        <!-- Mockup 3D en Cierre -->
+        <img src="https://res.cloudinary.com/nudnxkcm/image/upload/v1790989074/mockup_ebook_dulce_control.png" alt="Ebook Dulce Control Mockup 3D" class="closing-mockup-img" width="320" height="320">
+
+        <h2>Tu próximo postre puede estar listo hoy</h2>
+
+        <p class="closing-text">
+          Imagina volver a ofrecer un brownie en la mesa, o pedir helado en familia, sabiendo exactamente qué lleva y cómo prepararlo. Empieza hoy con 100 recetas, 3 bonos y 7 días para probarlo sin riesgo.
+        </p>
+
+        <!-- Botón Cierre 3D -->
+        <a href="#oferta" class="btn-cta" data-cta>
+          Quiero Dulce Control por US$ 9,90
+        </a>
+        <p class="cta-subtext">
+          Pago seguro. Acceso inmediato. Garantía de 7 días.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="footer-disclaimer">
+        Aviso importante: este producto es informativo y educativo. No sustituye la consulta, el diagnóstico ni el tratamiento de tu médico o nutricionista. Los valores nutricionales son aproximados. Los resultados varían según cada persona. Este material no promete curar ni revertir la diabetes.
+      </p>
+      <p class="footer-legal">
+        Este sitio no forma parte de Facebook, Instagram ni Google. Pagos procesados por Hotmart.
+      </p>
+      <p class="footer-copy">
+        © 2026 Dulce Control. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- BARRA DE COMPRA FIJA INFERIOR 3D (SOLO MÓVIL) -->
+  <aside class="fixed-cta-bar" id="fixed-cta-bar" aria-label="Acceso rápido a compra">
+    <a href="#oferta" class="btn-cta" data-cta>
+      Quiero mis 100 recetas ahora
+    </a>
+  </aside>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SCRIPT DE CONFIGURACIÓN Y COMPORTAMIENTO
+       ════════════════════════════════════════════════════════════ -->
+  <script>
+    /* ==========================================================================
+       👇 CONFIGURACIÓN DE TU ENLACE DE COMPRA DE HOTMART 👇
+       Pega aquí entre las comillas tu enlace de checkout de Hotmart.
+       Ejemplo: var HOTMART_LINK = "https://pay.hotmart.com/ABC1234567?checkoutMode=10";
+       Si lo dejas vacío (""), los botones llevarán suavemente a la sección de oferta.
+       ========================================================================== */
+    var HOTMART_LINK = "";
+
+    (function() {
+      // 1. Asignar el enlace de Hotmart a TODOS los botones de compra con atributo data-cta
+      var ctaButtons = document.querySelectorAll("[data-cta]");
+      ctaButtons.forEach(function(button) {
+        if (HOTMART_LINK && HOTMART_LINK.trim() !== "") {
+          button.setAttribute("href", HOTMART_LINK);
+          button.setAttribute("target", "_blank");
+          button.setAttribute("rel", "noopener noreferrer");
+        } else {
+          // Fallback a la sección de oferta si aún no se ha colocado el enlace
+          button.setAttribute("href", "#oferta");
+        }
+      });
+
+      // 2. Control de visibilidad de la barra fija inferior para celular
+      var fixedBar = document.getElementById("fixed-cta-bar");
+      var heroCta = document.getElementById("hero-cta");
+      var ofertaSection = document.getElementById("oferta");
+
+      if (!fixedBar) return;
+
+      function updateStickyBar() {
+        // En escritorio (ancho > 768px) permanece oculta
+        if (window.innerWidth > 768) {
+          fixedBar.classList.remove("is-visible");
+          return;
+        }
+
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Punto de activación: al pasar el primer botón del hero (aprox. 520px)
+        var triggerPoint = 520;
+        if (heroCta) {
+          var heroRect = heroCta.getBoundingClientRect();
+          triggerPoint = scrollY + heroRect.bottom + 20;
+        }
+
+        var pastHero = scrollY > triggerPoint;
+
+        // Ocultar cuando la sección de oferta (#oferta) esté visible en pantalla
+        var isOfferVisible = false;
+        if (ofertaSection) {
+          var offerRect = ofertaSection.getBoundingClientRect();
+          var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+          if (offerRect.top < windowHeight && offerRect.bottom > 0) {
+            isOfferVisible = true;
+          }
+        }
+
+        if (pastHero && !isOfferVisible) {
+          fixedBar.classList.add("is-visible");
+        } else {
+          fixedBar.classList.remove("is-visible");
+        }
+      }
+
+      window.addEventListener("scroll", updateStickyBar, { passive: true });
+      window.addEventListener("resize", updateStickyBar, { passive: true });
+      updateStickyBar();
+    })();
+  </script>
+</body>
+</html>
